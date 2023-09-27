@@ -1,0 +1,1 @@
+const api_key = process.env.OPEN_WEATHER;
