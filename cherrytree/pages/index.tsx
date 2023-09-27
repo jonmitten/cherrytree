@@ -6,7 +6,14 @@ const inter = Inter({ subsets: ['latin'] })
 export async function getStaticProps(){
   return {
     props: {
-      pageId: "home"
+      pageId: "home", 
+      metadata: {
+        title: "Jon Mitten", 
+        description: "The subtle disease that is Jon Mitten", 
+        openGraph: {
+          image: "https://example.com/image.jpg"
+        }
+      }
     }
   }
 }

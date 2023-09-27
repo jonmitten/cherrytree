@@ -1,3 +1,5 @@
+import Head from 'next/head' 
+
 type NavItemProps = {
     title: string
     url: string
@@ -61,6 +63,9 @@ function Footer(){
 export default function Layout({children}: any){
     return (
         <>
+        <Head>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Navbar pageId={children.props.pageId} />
         <main>{children}</main>
         <Footer />

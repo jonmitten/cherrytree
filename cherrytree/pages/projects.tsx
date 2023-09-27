@@ -1,7 +1,14 @@
+import Image, { StaticImageData } from "next/image"
+import puppyOne from "../public/images/puppy1.jpeg"
+import puppyTwo from "../public/images/puppy2.jpeg"
+import puppyThree from "../public/images/puppy3.jpeg"
+
+
 type ProjectItemProps = {
     name: string
     url: string
     urlDisplay: string
+    imageSrc: StaticImageData
 }
 
 export async function getStaticProps(){
@@ -18,6 +25,7 @@ function ProjectItem(props: ProjectItemProps){
         <li>
             <a href={url}>
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                    <Image className="w-full" src={image} alt={name} />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{name}</div>
                     </div>
@@ -45,11 +53,12 @@ export default function Projects() {
                 <h2 className="text-2xl">
                     Apps
                 </h2>
-                <ul className="grid grid-cols-4 gap-x-12 gap-y-16 mt-8">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mt-8">
                     <ProjectItem 
                         name={"BubbyCoin"}
                         url={"https://google.com"}
                         urlDisplay={"google.com"}
+                        imageSrc={puppyOne}
                     
                     />
                 </ul>    
@@ -58,11 +67,18 @@ export default function Projects() {
                 <h2 className="text-2xl">
                     Books
                 </h2>
-                <ul className="grid grid-cols-4 gap-x-12 gap-y-16 mt-8">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mt-8">
                     <ProjectItem 
                         name={"Not For the Faint of Heart"}
                         url={"https://google.com"}
                         urlDisplay={"google.com"}
+                        imageSrc={puppyTwo}
+                    />
+                    <ProjectItem 
+                        name={"A Beginner's Guide to Selling Millions of Books"}
+                        url={"https://google.com?q=how+to+sell+my+book"}
+                        urlDisplay={"Ask Me How Today!"}
+                        imageSrc={puppyThree}
                     />
                 </ul>
             </div>
