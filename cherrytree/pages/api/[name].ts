@@ -15,6 +15,9 @@ function searchCities(value: string):CityData[] {
 }
 
 export default function handler({query: {name}}: NextApiRequest, res:NextApiResponse) { 
+
+    const cityName = Array.isArray(name) ? name.join('') : name;
+
     // filter the list of cities to those whose names contain the given name
     const filteredCities = cityName? searchCities(cityName) : [];
 
