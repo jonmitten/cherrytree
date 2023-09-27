@@ -55,7 +55,7 @@ export default function Projects() {
                 </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mt-8">
                     <ProjectItem 
-                        name={"BubbyCoin"}
+                        name={"BubbeCoin"}
                         url={"https://google.com"}
                         urlDisplay={"google.com"}
                         imageSrc={puppyOne}
