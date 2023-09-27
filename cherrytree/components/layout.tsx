@@ -34,6 +34,7 @@ function Navbar(props: NavbarProps) {
                     <NavItem title={"Home"} url={"/"} isSelected={props.pageId == "home"}/>
                     <NavItem title={"Contact"} url={"/contact"} isSelected={props.pageId == "contact"} />
                     <NavItem title={"Projects"} url={"/projects"} isSelected={props.pageId == "projects"} />
+                    <NavItem title={"Weather"} url={"/weather"} isSelected={props.pageId == "weather" } />
                 </ul>
             </nav>
         </div>
