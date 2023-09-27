@@ -72,18 +72,21 @@ export default function cityDetail({ city, weather }: Props) {
           <div className="bg-blue-500 rounded p-4">
             <div className="grid grid-cols-2">
               <div>
-                <h2 className="text-2xl mb-4 text-white">{weather.main.temp_max.toFixed(0)}&deg;C</h2>
-                <span className="font-medium text-lg text-white">{weather.main.temp_max.toFixed(0)}&deg;C</span>
+                <h2 className="text-2xl mb-4 text-white">{city.name}</h2>
+                <span className="font-medium text-lg text-white">{weather.main.temp_max.toFixed(0)}&deg;C</span>&nbsp;
+                <span className="text-gray-300 text-sm">{weather.main.temp_min.toFixed(0)}&deg;C</span>
+              </div>
+              <div className="justify-self-end">
+                <Image
+                  src={iconURL}
+                  width={50}
+                  height={50}
+                  alt="Weather Icon"
+                />
+                <div className="text-white text-sm">{weather.weather[0].description}</div>
               </div>
             </div>
           </div>
-          <div>{weather.weather[0].description}</div>
-          <Image
-            src={iconURL}
-            width={50}
-            height={50}
-            alt="Weather Icon"
-          />
         </div>
       </main>
     </>
