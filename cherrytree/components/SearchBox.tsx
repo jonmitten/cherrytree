@@ -43,7 +43,7 @@ export default function SearchBox() {
         <ul>
           {cities.map((city) => (
             <li key={city.id}>
-              <Link href={`/detail/${city.id}`}>
+              <Link href={`/weather/detail/${city.id}`}>
                 {city.name}
                 {city.state ? `, ${city.state}` : ""} ({city.country})
               </Link>
